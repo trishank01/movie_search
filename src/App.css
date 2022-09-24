@@ -1,38 +1,98 @@
-.App {
+
+body {
+  background-color: #1E2931;
+  color: #fff;
+  font-family: Verdana, sans-serif;
+  font-style: normal;
+  line-height: 1.5;
+  margin: 0 auto;
+  width: 90%;
+}
+
+
+.cardWrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  height: 310px;
+  grid-gap: 50px;
+  margin-top: 70px;
+  height: auto;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+ 
+}
+
+.box{
+  box-shadow: 0 0 1em rgb(0 0 0 / 30%);
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+}
+
+.box img{
+  height: 300px;
+  object-fit: cover;
+}
+
+.Title{
+  color: white;
+  margin-top: 2px;
+  font-size: 12px;
+  text-align: left;
+  font-weight: 500;
+  margin-left: 10px;
+ 
+}
+
+.cardImg{
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box:hover .image {
+  opacity: 0.3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.box:hover .middle {
+  opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.text {
+  background-color: transparent;
   color: white;
+  font-size: 14px;
+  padding: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+.search{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search input{
+  padding: 10px;
+  width: 80%;
+  box-shadow: 0 0 1em rgb(0 0 0,.3);
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
 }
